@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+
+body {
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  color: white;
+  background-color: hsl(200, 71%, 66%);
+  box-sizing: border-box;
+}
+label {
+  color: black;
+}
+
+.flex {
+  padding: 50px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+img {
+  border-radius: 50%;
+}
+.center {
+  display: block;
+  margin-left: 50;
+  margin-right: 50;
+  width:50%;
+}
+
+.text {
+  width: 375px;
+  padding: 50px;
+}
+section {
+  /* font-weight:normal; */
+  cursor: pointer;
+  box-shadow: 0px 8px 5px rgba(0, 0, 0, 0.5);
+  background-color: hsl(248, 32%, 49%);
+  border-radius: 10px;
+  letter-spacing: 2px;
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+.form {
+  border-radius: 15px;
+  padding: 20px;
+  display: grid;
+  background-color: white;
+}
+input {
+  font-family: "Outfit", sans-serif;
+  border-radius: 5px;
+  padding: 15px;
+  outline: none;
+  border: 3px solid hsl(246, 25%, 77%);
+}
+::placeholder {
+  color: hsl(246, 25%, 77%);
+  font-weight: bold;
+}
+#submit {
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  font-family: "Outfit", sans-serif;
+  color: white;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: hsl(154, 59%, 51%);
+  /* box-shadow: 0px 5px 1px hsl(154, 59%, 51%); */
+  /* box-shadow: 3px 3px 5px 6px #ccc; */
+  /* filter: drop-shadow(10px 10px 4px #ccc); */
+  /* filter:drop-shadow(offset-x offset-y blur-radius color) */
+}
+
+@media only screen and (max-width: 700px) {
+  .flex {
+    padding: 50px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+  }
+}

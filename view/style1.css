@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+
+body {
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  color: white;
+  background-color: hsl(202, 80%, 78%);
+}
+label {
+  color: black;
+}
+.flex {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text {
+  width: 375px;
+  padding: 50px;
+}
+section {
+  /* font-weight:normal; */
+  cursor: pointer;
+  /* box-shadow: 0px 8px 5px rgba(0, 0, 0, 0.5); */
+  background-color: hsl(248, 32%, 49%);
+  border-radius: 10px;
+  letter-spacing: 2px;
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+.form {
+  border-radius: 15px;
+  padding: 20px;
+  display: grid;
+  background-color: white;
+}
+input {
+  font-family: "Outfit", sans-serif;
+  border-radius: 5px;
+  padding: 15px;
+  outline: none;
+  border: 3px solid hsl(246, 25%, 77%);
+}
+::placeholder {
+  color: hsl(246, 25%, 77%);
+  font-weight: bold;
+}
+#submit {
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  font-family: "Outfit", sans-serif;
+  color: white;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: hsl(154, 59%, 51%);
+}
+
+@media only screen and (max-width: 700px) {
+  .flex {
+    padding: 50px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+  }
+}
