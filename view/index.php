@@ -22,7 +22,8 @@
       </p>
     </div>
     <div>
-      <form class="form" id="myForm" onsubmit="empty(event)" action="../model/appointment.php">
+
+      <form class="form" id="myForm" onsubmit="return handlesubmit()" action="../model/appointment.php" method="post">
         <label for="name">Name:</label><br />
         <input type="text" id="name" name="name" placeholder="Name" />
         <p id="f" style="
@@ -36,7 +37,7 @@
 
         <br />
         <label>Email</label><br>
-        <input type="email" id="mail" name="mail" placeholder="Email Address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
+        <input type="email" id="email" name="email" placeholder="Email Address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
         <p id="m" style="
               color: red;
               font-size: small;
@@ -93,9 +94,14 @@
         </select><br />
         <div>
           <label>Gender</label><br></br>
-          <input type="radio" name="rad" value="male" /><label>Male</label>
+          <select name="gender" id="">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="others">Others</option>
+          </select>
+          <!-- <input type="radio" name="rad" value="male" /><label>Male</label>
           <input type="radio" name="rad" value="female" /><label>Female</label>
-          <input type="radio" name="rad" value="others" checked /><label>Other</label>
+          <input type="radio" name="rad" value="others" /><label>Other</label> -->
         </div>
         <p id="r" style="
               color: red;
@@ -114,34 +120,34 @@
   </div>
 </body>
 <script>
-  function empty(event) {
-    const form = document.querySelector("#myForm");
-    event.preventDefault()
-    const name = document.getElementById("name").value;
-    if(name.length < 10 ){
+  function handlesubmit() {
+    let form = document.querySelector("#myForm");
+    let name = document.getElementById("name").value;
+    if (name.length < 10) {
       console.log(name);
-      return alert("please insert name with valid length")
+      alert("please insert name with valid length")
+      return false
     }
-    const mail = document.getElementById("mail").value;
-    console.log(mail)
-    const phone = document.getElementById("phone").value;
+    let email = document.getElementById("email").value;
+    console.log(email)
+    let phone = document.getElementById("phone").value;
     console.log(phone)
-    const date = document.getElementById("date").value;
+    let date = document.getElementById("date").value;
     console.log(date)
-    const Doctors = document.getElementById("Doctors").value;
+    let Doctors = document.getElementById("Doctors").value;
     console.log(Doctors)
-    form.submit();
+    return true
     // document.querySelector("#myForm").submit()
 
-        // document.getElementById("cn").innerHTML="Book Appointment";
-        // var xhttp = new XMLHttpRequest();
-        // xhttp.onreadystatechange = function () {
-        //   if (this.readyState == 4 && this.status == 200) {
-        //     document.getElementById("cng").innerHTML = this.responseText;
-        //   }
-        // };
-        // xhttp.open("GET", "login.html", true);
-        // xhttp.send();
+    // document.getElementById("cn").innerHTML="Book Appointment";
+    // var xhttp = new XMLHttpRequest();
+    // xhttp.onreadystatechange = function () {
+    //   if (this.readyState == 4 && this.status == 200) {
+    //     document.getElementById("cng").innerHTML = this.responseText;
+    //   }
+    // };
+    // xhttp.open("GET", "login.html", true);
+    // xhttp.send();
   }
 </script>
 
