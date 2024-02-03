@@ -12,16 +12,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             die("No User Found");
         } else {
             echo("You are authorized user");
-            // $user = $result->fetch_assoc();
+            $user = $result->fetch_assoc();
             // echo "<pre>";
             // print_r($user);
             // echo "</pre>";
-            // $_SESSION['email'] = $user['email'];
-            // $_SESSION['name'] = $user['name'];
-            // $_SESSION['id'] = $user['id'];
-            // $_SESSION['role'] = $user['role'];
-            // header("Location: ../View/Pages/home.php");
-            // exit();
+            $_SESSION['email'] = $user['email'];
+            $_SESSION['name'] = $user['name'];
+            $_SESSION['id'] = $user['id'];
+            $_SESSION['role'] = $user['role'];
+            header("Location: ../view/readuser.php");
+            exit();
         }
     } else {
         return;

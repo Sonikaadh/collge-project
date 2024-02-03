@@ -18,7 +18,7 @@ label {
   align-items: center;
 }
 img {
-  border-radius: 50%;
+  border-radius: 100%;
 }
 .center {
   display: block;
@@ -28,8 +28,8 @@ img {
 }
 
 .text {
-  width: 375px;
-  padding: 50px;
+  width: 500px;
+  padding: 100px;
 }
 section {
   /* font-weight:normal; */
@@ -37,21 +37,26 @@ section {
   box-shadow: 0px 8px 5px rgba(0, 0, 0, 0.5);
   background-color: hsl(248, 32%, 49%);
   border-radius: 10px;
+  width:100%;
+  padding:12px 20px;
+  box-sizing:border-box;
   letter-spacing: 2px;
   text-align: center;
   padding: 20px;
   color: white;
 }
 .form {
-  border-radius: 15px;
-  padding: 20px;
+  border-radius: 30px;
+  width:100%;
+  padding:12px 20px;
+  box-sizing:border-box;
   display: grid;
   background-color: white;
 }
 input {
   font-family: "Outfit", sans-serif;
-  border-radius: 5px;
-  padding: 15px;
+  border-radius: 20px;
+  padding: 30px;
   outline: none;
   border: 3px solid hsl(246, 25%, 77%);
 }

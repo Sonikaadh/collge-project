@@ -11,15 +11,15 @@ try {
     $statement = $connection->prepare($query);
     $statement->bind_param("ssssss", $name,$email,$phone,$date,$Doctors,$gender);
     $statement->execute();
-    if ($statement->affected_rows > 0) {
-        echo '<script>alert("Appointment Booked Successfully")</script>';
+    echo '<script>alert("Appointment Booked Successfully")</script>';
         header("Location: ../view/index.php");
         exit();
-    } else {
-        echo '<script>alert("Failed to insert into database")</script>';
-        header("Location: ../view/index.php");
-        exit();
-    }
+    // if ($statement->affected_rows > 0) {
+    // } else {
+    //     echo '<script>alert("Failed to insert into database")</script>';
+    //     header("Location: ../view/index.php");
+    //     exit();
+    // }
 
     // $statement->close();
 } catch (\Throwable $th) {

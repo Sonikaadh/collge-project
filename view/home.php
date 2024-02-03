@@ -53,11 +53,11 @@
     <header>
         <nav class="navbar">
             <ul class="navbar-list">
-                <li><a href="../Pages/home.php">Home</a></li>
+                <!-- <li><a href="../Pages/home.php">Home</a></li>
                 <li><a href="../Pages/register.php">Register Users</a></li>
-                <li><a href="../Pages/doctors.php">Doctors</a></li>
-                <li><a href="../Pages/patient.php">Users</a></li>
-                <li><a href="../Pages/appointment.php">Book Appointment</a></li>
+                <li><a href="../Pages/doctors.php">Doctors</a></li>-->
+                <li><a href="./readuser.php">Users</a></li> 
+                <li><a href="./appointmentRead.php">Book Appointment</a></li>
             </ul>
         </nav>
     </header>

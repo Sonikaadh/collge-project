@@ -18,8 +18,7 @@
       <h1>MEDISCHEDULING</h1>
       <img src="../images/OIP.jpg" class="center">
       <p>
-        Medischeduling is an appointment scheduling system designed for hospitals and healthcare facilities. It simplifies the appointment management process, benefiting both patients and healthcare providers. With user-friendly interfaces and real-time access to doctor availability, patients can easily book appointments, resulting in convenience and improved patient satisfaction.
-      </p>
+        Medischeduling is an appointment scheduling system designed for hospitals and healthcare facilities. It simplifies the appointment management process, benefiting both patients and healthcare providers. </p>
     </div>
     <div>
 
@@ -29,7 +28,10 @@
         <p id="f" style="
               color: red;
               font-size: small;
-              padding-left: 60%;
+              width:100%;
+              padding:12px 20px;
+              box-sizing:border-box;
+              margin:8px 0;
               display: none;
             ">
           <i>Name cannot be empty</i>
@@ -41,7 +43,7 @@
         <p id="m" style="
               color: red;
               font-size: small;
-              padding-left: 60%;
+              padding-left: 100%;
               display: none;
             ">
           <i>Looks like this is not an email</i>
@@ -53,7 +55,7 @@
         <p id="p" style="
               color: red;
               font-size: small;
-              padding-left: 60%;
+              padding-left: 100%;
               display: none;
             ">
           <i>Number cannot be empty</i>
@@ -64,7 +66,7 @@
         <p id="d" style="
               color: red;
               font-size: small;
-              padding-left: 60%;
+              padding-left: 100%;
               display: none;
             ">
           <i>Choose Date</i>
@@ -88,7 +90,7 @@
           <p id="d" style="
               color: red;
               font-size: small;
-              padding-left: 60%;
+              padding-left: 100%;
               display: none;
             ">
         </select><br />
@@ -106,7 +108,7 @@
         <p id="r" style="
               color: red;
               font-size: small;
-              padding-left: 60%;
+              padding-left: 100%;
               display: none;
             ">
           <i>Choose One</i>
@@ -137,17 +139,7 @@
     let Doctors = document.getElementById("Doctors").value;
     console.log(Doctors)
     return true
-    // document.querySelector("#myForm").submit()
 
-    // document.getElementById("cn").innerHTML="Book Appointment";
-    // var xhttp = new XMLHttpRequest();
-    // xhttp.onreadystatechange = function () {
-    //   if (this.readyState == 4 && this.status == 200) {
-    //     document.getElementById("cng").innerHTML = this.responseText;
-    //   }
-    // };
-    // xhttp.open("GET", "login.html", true);
-    // xhttp.send();
   }
 </script>
 

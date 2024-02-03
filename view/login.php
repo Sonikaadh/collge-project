@@ -36,7 +36,7 @@
           <i>Password cannot be empty</i>
         </p>
         <br />
-        <input id="submit"  type="submit" value="Login" /><br />
+        <input id="submit" type="submit" value="Login" /><br />
       </form>
     </div>
   </div>
