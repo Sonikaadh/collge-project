@@ -1,7 +1,11 @@
 <?php
 include "../model/connection.php";
-$query = "SELECT * FROM user";
-$result = $connection->query($query);
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
+    $id = $_GET["id"];
+    $query = "SELECT * FROM user WHERE id= '$id'";
+    $result = $connection->query($query);
+    $candidate = $result->fetch_assoc();
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -116,14 +120,14 @@ $result = $connection->query($query);
             </nav>
         </header>
         <div class="flex">
-    <div>
-      <form class="form" name="myform" action="../model/user-add-controller.php"  method="post">
-        <input type="text" id="First Name" name="name" placeholder="Name" required/>
-        <input type="Email" id="Email" name="email" placeholder="Email" required/>
-        <input type="password" id="password" name="password" placeholder="Password" required/><br />
-        <input id="submit" type="submit" value="Register" /><br />
-      </form>
-    </div>
+            <div>
+                <form class="form" name="myform" autocomplete="false" action="../controller/update-user.php" method="post">
+                    <input type="text" id="First Name" name="name" placeholder="Name" value="<?php echo $candidate['name']; ?>" required />
+                    <input type="email" id="Email" name="email" placeholder="Email" value="<?php echo $candidate['email']; ?>" required />
+                    <input type="hidden" name="id"  value="<?php echo $candidate['id']; ?>">
+                    <input id="submit" type="submit" value="Update" /><br />
+                </form>
+            </div>
 </body>
 
 </html>

@@ -50,7 +50,7 @@
         </p>
         <br />
         <label for="phone">Phone number:</label><br />
-        <input type="tel" id="phone" name="phone" placeholder="Number" placepattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+        <input type="number" id="phone" name="phone" placeholder="Number" placepattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
 
         <p id="p" style="
               color: red;
@@ -62,7 +62,7 @@
         </p>
         <br />
         <label>Date</label><br>
-        <input type="date" id="date" name="date" />
+        <input type="date" id="dateinp" name="date" onchange="handleDate(this.value)"/>
         <p id="d" style="
               color: red;
               font-size: small;
@@ -122,6 +122,14 @@
   </div>
 </body>
 <script>
+  function handleDate(value){
+    // console.log(new Date().getFullYear());
+    const currentDate = new Date().toISOString().split('T')[0];
+    if(currentDate > value){
+      alert("Please provide valid apointment date");
+      document.getElementById("dateinp").value =null
+    }
+  }
   function handlesubmit() {
     let form = document.querySelector("#myForm");
     let name = document.getElementById("name").value;

@@ -7,12 +7,15 @@ $date = $_POST["date"];
 $Doctors = $_POST["Doctors"];
 $gender = $_POST["gender"];
 $query = "INSERT INTO appointment(name,email,phone,date,department,gender) VALUES(?,?,?,?,?,?)";
+if(!$name || !$date || $phone){
+    echo "Insufficient data";
+}
 try {
     $statement = $connection->prepare($query);
     $statement->bind_param("ssssss", $name,$email,$phone,$date,$Doctors,$gender);
     $statement->execute();
     echo '<script>alert("Appointment Booked Successfully")</script>';
-        header("Location: ../view/index.php");
+        header("Location: ../view/confirmbooked.php");
         exit();
     // if ($statement->affected_rows > 0) {
     // } else {

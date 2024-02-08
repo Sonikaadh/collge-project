@@ -56,7 +56,7 @@ section {
 input {
   font-family: "Outfit", sans-serif;
   border-radius: 20px;
-  padding: 30px;
+  padding: 1rem 30px;
   outline: none;
   border: 3px solid hsl(246, 25%, 77%);
 }

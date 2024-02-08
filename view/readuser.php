@@ -111,6 +111,7 @@ $result = $connection->query($query);
                     <!-- <li><a href="../Pages/home.php">Home</a></li> -->
                     <!-- <li><a href="../Pages/register.php">Register Users</a></li>
                         <li><a href="../Pages/doctors.php">Doctors</a></li> -->
+                    <li><a href="./create-doctor.php">Create Doctors</a></li>
                     <li><a href="../view/readuser.php">Users</a></li>
                     <li><a href="./appointmentRead.php"> Appointment List</a></li>
                     <li><a href="./adduser.php">Add User</a></li>
@@ -136,7 +137,7 @@ $result = $connection->query($query);
                     <?php echo $row["password"]; ?>
                 </td>
                 <td>
-                    <a href="../../View/Pages/updateVoters.php?id=<?php echo $row["id"]; ?>"><button class="successBtn">Edit</button></a>
+                    <a href="./edit-user-view.php?id=<?php echo $row["id"]; ?>"><button class="successBtn">Edit</button></a>
                     <a href="../controller/deleteuser.php?id=<?php echo $row["id"]; ?>">
                         <button class="dangerBtn">Delete</button>
                     </a>

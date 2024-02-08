@@ -149,8 +149,8 @@ $result = $connection->query($query);
                     <?php echo $row["gender"]; ?>
                 </td>
                 <td>
-                    <a href="../../View/Pages/updateVoters.php?id=<?php echo $row["id"]; ?>"><button class="successBtn">Edit</button></a>
-                    <a href="../../Controller/delete_User_layor.php?id=<?php echo $row["id"]; ?>"><button class="dangerBtn">Delete</button></a>
+                    <!-- <a href="../../View/Pages/updateVoters.php?id=<?php echo $row["id"]; ?>"><button class="successBtn">Edit</button></a> -->
+                    <a href="../controller/delete_appointment.php?id=<?php echo $row["id"]; ?>"><button class="dangerBtn">Delete</button></a>
                 </td>
             </tr>
             <?php endwhile; ?>
